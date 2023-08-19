@@ -1,23 +1,47 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import { useSession, signOut } from "next-auth/react"
 import NavLogo from '@/src/Assets/logo.png';
+import { Button } from 'antd';
 
-const NavManuList = <>
-    <li><a>Item 1</a></li>
-    <li tabIndex={0}>
-        <details>
-            <summary>Parent</summary>
-            <ul className="w-40 p-2">
-                <li><a>Submenu 1</a></li>
-                <li><a>Submenu 2</a></li>
-            </ul>
-        </details>
-    </li>
-    <li><a>Item 3</a></li>
-</>
 
 const Navbar = () => {
+    const { data: session } = useSession()
+
+    const NavManuList = <>
+        <li><Link href={'/'}>Home</Link></li>
+        <li tabIndex={0}>
+            <details>
+                <summary>Category</summary>
+                <ul className="w-40 p-2">
+                    <li><Link href={'/'}>CPU / Processor</Link></li>
+                    <li><Link href={'/'}>Motherboard</Link></li>
+                    <li><Link href={'/'}>RAM</Link></li>
+                    <li><Link href={'/'}>Power Supply Unit</Link></li>
+                    <li><Link href={'/'}>Storage Device</Link></li>
+                    <li><Link href={'/'}>Monitor</Link></li>
+                    <li><Link href={'/'}>Others</Link></li>
+                </ul>
+            </details>
+        </li>
+        <li><Link href={'/'}>About</Link></li>
+        <li><Link href={'/'}>Contact</Link></li>
+        <li>
+            {
+                session?.user ? <li>
+                    <Button type="primary" danger
+                        onClick={() => signOut()}
+                    >
+                        Logout
+                    </Button>
+                </li>
+                    : <Link href={'/auth/login'}>Login</Link>
+            }
+        </li>
+    </>
+
+
     return (
         <nav>
             <div className="navbar bg-base-100">
@@ -42,9 +66,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href={'/'} className='common-btn'>
+                    <Link href={'/pc-builder'} className='common-btn'>
                         PC Builder
-                    </Link>  
+                    </Link>
                 </div>
             </div>
         </nav>
