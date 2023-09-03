@@ -2,19 +2,17 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { useSession, signOut } from "next-auth/react"
-import NavLogo from '@/src/Assets/logo.png';
-import { Button } from 'antd';
-
+import { PC_Builder_Logo } from '@/src/Assets';
 
 const Navbar = () => {
     const { data: session } = useSession()
 
     const NavManuList = <>
         <li><Link href={'/'}>Home</Link></li>
-        <li tabIndex={0}>
+        <li tabIndex={0} className='z-50'>
             <details>
                 <summary>Category</summary>
-                <ul className="w-40 p-2">
+                <ul className="p-2 w-80">
                     <li><Link href={'/'}>CPU / Processor</Link></li>
                     <li><Link href={'/'}>Motherboard</Link></li>
                     <li><Link href={'/'}>RAM</Link></li>
@@ -30,20 +28,21 @@ const Navbar = () => {
         <li>
             {
                 session?.user ? <li>
-                    <Button type="primary" danger
+                    <button
+                        className="denger-btn"
                         onClick={() => signOut()}
                     >
                         Logout
-                    </Button>
+                    </button>
                 </li>
-                    : <Link href={'/auth/login'}>Login</Link>
+                    : <Link href={'/auth/login'} className='common-btn'>Login</Link>
             }
         </li>
     </>
 
 
     return (
-        <nav>
+        <nav className='z-50'>
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -56,12 +55,12 @@ const Navbar = () => {
                     </div>
                     <div className="logo-section">
                         <Link href="/">
-                            <Image src={NavLogo} alt="logo" width={200} />
+                            <Image src={PC_Builder_Logo} alt="logo" width={200} />
                         </Link>
                     </div>
                 </div>
                 <div className="hidden navbar-center lg:flex">
-                    <ul className="px-1 menu menu-horizontal">
+                    <ul className="flex items-center px-1 menu menu-horizontal text-[1.2rem]">
                         {NavManuList}
                     </ul>
                 </div>

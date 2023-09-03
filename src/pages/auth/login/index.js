@@ -1,4 +1,4 @@
-import { FaUnlockAlt, FaUniversalAccess, FaArrowLeft, FaArrowRight, FaGoogle, FaGithub } from "react-icons/fa";
+import { FaUnlockAlt, FaUniversalAccess, FaArrowLeft, FaGoogle, FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 import Image from 'next/image';
 import Logo from '@/src/Assets/logo.png';
@@ -9,7 +9,7 @@ import { signIn } from "next-auth/react";
 const LoginPage = () => {
     return (
         <section>
-            <div className="flex flex-col justify-center min-h-screen sm:py-12">
+            <div className="flex flex-col justify-center sm:py-12">
                 <div className="p-10 mx-auto xs:p-0 md:w-full md:max-w-md">
                     <div className="flex justify-center mb-5 text-2xl font-bold text-center items-cener">
                         <Link href="/">
@@ -23,7 +23,7 @@ const LoginPage = () => {
                                     type="button"
                                     className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center flex items-center gap-2 justify-center"
                                     onClick={() => signIn("google", {
-                                        callbackUrl: "http://localhost:3000/",
+                                        callbackUrl: "https://pc-repair-tech.vercel.app/",
                                     })}
                                 >
                                     <FaGoogle />
@@ -33,7 +33,7 @@ const LoginPage = () => {
                                     type="button"
                                     className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center  flex justify-center items-center gap-2"
                                     onClick={() => signIn("github", {
-                                        callbackUrl: "http://localhost:3000/",
+                                        callbackUrl: "https://pc-repair-tech.vercel.app/",
                                     })}
                                 >
                                     <FaGithub />

@@ -1,13 +1,18 @@
-import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
+import { ApiBasdUrl } from "@/src/Utils/network";
+import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const apiSlice = createApi({
-    reducerPath: 'api',
-    baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000' }),
-    endpoints: builder => ({
-        getNewses: builder.query({
-            query: () => '/news'
-        })
-    })
-})
+  reducerPath: "api",
 
-export const { useGetNewsesQuery } = apiSlice
+  baseQuery: fetchBaseQuery({ baseUrl: ApiBasdUrl}),
+  tagTypes:['category'],
+  endpoints: (builder) => ({
+    getCategory: builder.query({
+      query: ({category, user}) => `/pc-cart/${category}?user=${user}`,
+      providesTags:['category']
+    }),
+    
+  }),
+});
+
+export const { useGetCategoryQuery ,usePostProductMutation} = apiSlice;

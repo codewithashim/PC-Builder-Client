@@ -1,0 +1,26 @@
+[
+    {
+      "category": "Motherboard",
+      "imageSrc": "https://res.cloudinary.com/codewithashim/image/upload/v1693136771/PCBuilder/category/rol50bvweuoywkgbueei.png"
+    },
+    {
+      "category": "Monitor",
+      "imageSrc": "https://res.cloudinary.com/codewithashim/image/upload/v1693136771/PCBuilder/category/ytrekngko1zq7vlwyddg.png"
+    },
+    {
+      "category": "CPU",
+      "imageSrc": "https://res.cloudinary.com/codewithashim/image/upload/v1693136771/PCBuilder/category/d6gzidubpxm2lmrqduxp.png"
+    },
+    {
+      "category": "RAM",
+      "imageSrc": "https://res.cloudinary.com/codewithashim/image/upload/v1693136771/PCBuilder/category/d7ygyzdl2u5mgqofrjci.png"
+    },
+    {
+      "category": "Power Supply Unit",
+      "imageSrc": "https://res.cloudinary.com/codewithashim/image/upload/v1693136771/PCBuilder/category/kahdk4fg78qeot5ik84u.png"
+    },
+    {
+      "category": "Storage Device",
+      "imageSrc": "https://res.cloudinary.com/codewithashim/image/upload/v1693136771/PCBuilder/category/ct0kvgxv1mblx8mekp65.png"
+    }
+  ]

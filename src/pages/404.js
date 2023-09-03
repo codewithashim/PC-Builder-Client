@@ -1,9 +1,9 @@
-import ErrorImg from "@/src/Assets/Images/404_Error_Page.jpg";
 import Image from "next/image";
 import { Button } from "antd";
 import Head from "next/head";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import { NotFound } from "../Assets";
 
 const NotFoundPage = () => {
 
@@ -25,7 +25,7 @@ const NotFoundPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Image
-        src={ErrorImg}
+        src={NotFound}
         width={700}
         alt="error_image"
         style={{ display: "flex", margin: "50px auto" }}
