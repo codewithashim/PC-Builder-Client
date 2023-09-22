@@ -15,9 +15,6 @@ export const authOptions = {
   ],
   pages: {
     signIn: "/auth/login",
-    error: "/error",
-    verifyRequest: "/verify-request",
-    newUser: null
   }
 }
 
