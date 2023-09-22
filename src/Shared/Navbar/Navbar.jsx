@@ -7,19 +7,49 @@ import { PC_Builder_Logo } from '@/src/Assets';
 const Navbar = () => {
     const { data: session } = useSession()
 
+
+    const categories = [
+        {
+          category: "CPU",
+          link: "/pc/CPU",
+        },
+        {
+          category: "Motherboard",
+          link: "/pc/Motherboard",
+        },
+        {
+          category: "RAM",
+          link: "/pc/RAM",
+        },
+        {
+          category: "Power Supply Unit",
+          link: "/pc/PowerSupplyUnit",
+        },
+        {
+          category: "Storage Device",
+          link: "/pc/StorageDevice",
+        },
+        {
+          category: "Monitor",
+          link: "/pc/Monitor",
+        },
+      ];
+    
+
     const NavManuList = <>
         <li><Link href={'/'}>Home</Link></li>
         <li tabIndex={0} className='z-50'>
             <details>
                 <summary>Category</summary>
                 <ul className="p-2 w-80">
-                    <li><Link href={'/'}>CPU / Processor</Link></li>
-                    <li><Link href={'/'}>Motherboard</Link></li>
-                    <li><Link href={'/'}>RAM</Link></li>
-                    <li><Link href={'/'}>Power Supply Unit</Link></li>
-                    <li><Link href={'/'}>Storage Device</Link></li>
-                    <li><Link href={'/'}>Monitor</Link></li>
-                    <li><Link href={'/'}>Others</Link></li>
+                    {categories?.map((category, i) => (
+                <li key={i}>
+                  <Link href={`/pc/${category.category}`}>
+                    {category.category}
+                  </Link>
+                </li>
+              ))}
+
                 </ul>
             </details>
         </li>
@@ -65,9 +95,11 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link href={'/pc-builder'} className='common-btn'>
+                {
+                    session?.user &&  <Link href={'/pc'} className='common-btn'>
                         PC Builder
                     </Link>
+                }
                 </div>
             </div>
         </nav>

@@ -10,7 +10,7 @@ const Home = ({allProduct, categories}) => {
             <HeroSection />
             <HomeBanner />
             <FeatureCategory categories={categories}/>
-            <FeatureProducts />
+            <FeatureProducts allProduct={allProduct} />
         </section>
     );
 };

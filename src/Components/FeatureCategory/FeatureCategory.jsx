@@ -36,9 +36,9 @@ const FeatureCategory = ({categories}) => {
                                 <Image
                                     src={category?.imageSrc}
                                     alt="category"
-                                    height={200}
-                                    width={300}
-                                    style={{ marginInline: "auto", borderRadius: "15px", height: "140px" }}
+                                    height={150}
+                                    width={150}
+                                    style={{ marginInline: "auto", borderRadius: "15px"}}
 
                                 />
                             </Link>

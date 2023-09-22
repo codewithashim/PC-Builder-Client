@@ -26,7 +26,7 @@ export const getStaticProps = async () => {
   const productResponse = await fetch(`${ApiBasdUrl}/pc`);
   const productData = await productResponse.json();
 
-  const categoryResponse = await fetch("https://pc-builder-server-indol.vercel.app/api/v1/category");
+  const categoryResponse = await fetch(`${ApiBasdUrl}/category`);
   const categoriesData = await categoryResponse.json();
   return {
     props: {

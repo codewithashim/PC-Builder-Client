@@ -1,9 +1,9 @@
 import { FaUnlockAlt, FaUniversalAccess, FaArrowLeft, FaGoogle, FaGithub } from "react-icons/fa";
 import Link from 'next/link';
 import Image from 'next/image';
-import Logo from '@/src/Assets/logo.png';
 import RootLayout from '@/src/Layouts/RootLayout';
 import { signIn } from "next-auth/react";
+import { PC_Builder_Logo } from '@/src/Assets';
 
 
 const LoginPage = () => {
@@ -13,7 +13,7 @@ const LoginPage = () => {
                 <div className="p-10 mx-auto xs:p-0 md:w-full md:max-w-md">
                     <div className="flex justify-center mb-5 text-2xl font-bold text-center items-cener">
                         <Link href="/">
-                            <Image src={Logo} alt="logo" width={200} />
+                            <Image src={PC_Builder_Logo} alt="logo" width={200} />
                         </Link>
                     </div>
                     <div className="w-full bg-white divide-y divide-gray-200 rounded-lg shadow">
