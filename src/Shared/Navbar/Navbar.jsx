@@ -69,7 +69,13 @@ const Navbar = () => {
 
 
     return (
-        <nav className='z-50'>
+        <nav className='z-50'
+            style={{
+                position: 'sticky',
+                top: 0,
+                zIndex: 999,
+            }}
+        >
             <div className="navbar bg-base-100">
                 <div className="navbar-start">
                     <div className="dropdown">
