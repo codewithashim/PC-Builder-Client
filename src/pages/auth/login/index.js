@@ -23,7 +23,7 @@ const LoginPage = () => {
                                     type="button"
                                     className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center flex items-center gap-2 justify-center"
                                     onClick={() => signIn("google", {
-                                        callbackUrl: "https://pc-builder-rose.vercel.app/",
+                                        callbackUrl: "https://pc-builder-rose.vercel.app",
                                     })}
                                 >
                                     <FaGoogle />
@@ -33,7 +33,7 @@ const LoginPage = () => {
                                     type="button"
                                     className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center  flex justify-center items-center gap-2"
                                     onClick={() => signIn("github", {
-                                        callbackUrl: "https://pc-builder-rose.vercel.app/",
+                                        callbackUrl: "https://pc-builder-rose.vercel.app",
                                     })}
                                 >
                                     <FaGithub />
