@@ -16,7 +16,7 @@ const HomeBanner = () => {
                     </h3>
 
                     <div>
-                        <Link href={'/pc-builder'} className='p-4 text-2xl common-btn'>
+                        <Link href={'/pc'} className='p-4 text-2xl common-btn'>
                             PC Builder
                         </Link>
                     </div>
