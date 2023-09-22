@@ -22,14 +22,14 @@ const LoginPage = () => {
                             <div className="flex flex-wrap items-center justify-center gap-6">
                             <GoogleOutlined
                                 onClick={() => signIn("google", {
-                                callbackUrl: `https://pc-builder-rose.vercel.app/`,
+                                callbackUrl: `/`,
                                 })}
                                 style={{
                                     fontSize: "50px",    
                                 }}    
                             />
                             <GithubOutlined onClick={() => signIn("github", {
-                                callbackUrl: `https://pc-builder-rose.vercel.app/`,
+                                callbackUrl: `/`,
                             })} 
                             style={{
                                 fontSize: "50px",    
