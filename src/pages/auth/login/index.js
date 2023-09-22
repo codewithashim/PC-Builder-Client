@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import RootLayout from '@/src/Layouts/RootLayout';
 import { signIn } from "next-auth/react";
+import { GoogleOutlined, GithubOutlined } from "@ant-design/icons";
 import { PC_Builder_Logo } from '@/src/Assets';
 
 
@@ -18,27 +19,22 @@ const LoginPage = () => {
                     </div>
                     <div className="w-full bg-white divide-y divide-gray-200 rounded-lg shadow">
                         <div className="p-5">
-                            <div className="flex flex-wrap items-center justify-center gap-2">
-                                <button
-                                    type="button"
-                                    className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center flex items-center gap-2 justify-center"
-                                    onClick={() => signIn("google", {
-                                        callbackUrl: "https://pc-builder-rose.vercel.app",
-                                    })}
-                                >
-                                    <FaGoogle />
-                                    Google
-                                </button>
-                                <button
-                                    type="button"
-                                    className="transition duration-200 border border-gray-200 text-gray-500 w-full py-2.5 rounded-lg text-sm shadow-sm hover:shadow-md font-normal text-center  flex justify-center items-center gap-2"
-                                    onClick={() => signIn("github", {
-                                        callbackUrl: "https://pc-builder-rose.vercel.app",
-                                    })}
-                                >
-                                    <FaGithub />
-                                    Github
-                                </button>
+                            <div className="flex flex-wrap items-center justify-center gap-6">
+                            <GoogleOutlined
+                                onClick={() => signIn("google", {
+                                callbackUrl: `https://pc-builder-rose.vercel.app/`,
+                                })}
+                                style={{
+                                    fontSize: "50px",    
+                                }}    
+                            />
+                            <GithubOutlined onClick={() => signIn("github", {
+                                callbackUrl: `https://pc-builder-rose.vercel.app/`,
+                            })} 
+                            style={{
+                                fontSize: "50px",    
+                            }}    
+                            />
                             </div>
                         </div>
                         <div className="py-5">
