@@ -7,8 +7,6 @@ const { Meta } = Card;
 
 const ProductPage = ({ allProduct }) => {
 
-  console.log(allProduct, "allProducts++")
-  
   return (
     <div className="text-center mt-7">
       <h2 className="text-[2.1rem] font-extrabold my-2">Feature Products</h2>

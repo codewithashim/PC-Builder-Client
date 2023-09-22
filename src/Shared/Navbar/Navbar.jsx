@@ -6,8 +6,6 @@ import { PC_Builder_Logo } from '@/src/Assets';
 
 const Navbar = () => {
     const { data: session } = useSession()
-
-
     const categories = [
         {
           category: "CPU",
@@ -35,7 +33,6 @@ const Navbar = () => {
         },
       ];
     
-
     const NavManuList = <>
         <li><Link href={'/'}>Home</Link></li>
         <li tabIndex={0} className='z-50'>
@@ -44,8 +41,8 @@ const Navbar = () => {
                 <ul className="p-2 w-80">
                     {categories?.map((category, i) => (
                 <li key={i}>
-                  <Link href={`/pc/${category.category}`}>
-                    {category.category}
+                  <Link href={`/pc/${category?.category}`}>
+                    {category?.category}
                   </Link>
                 </li>
               ))}

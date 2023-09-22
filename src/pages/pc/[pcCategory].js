@@ -116,7 +116,7 @@ export const getStaticPaths = async () => {
   const products = await res.json();
 
   const paths = products?.data?.map((product) => ({
-    params: { pcCategory: product?.category }, // Use pcId instead of pcCategory
+    params: { pcCategory: product?.category }, 
   }));
 
   return { paths, fallback: false };
